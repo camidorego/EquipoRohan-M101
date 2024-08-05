@@ -27,11 +27,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #386641;
+  background-color: #6a994e;
   cursor: pointer;
   margin-top: 10px;
+  color: white;
 }
 button:hover {
-  background-color: #344e41;
+  background-color: #386641;
 }
 
