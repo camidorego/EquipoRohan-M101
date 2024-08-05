@@ -5,10 +5,13 @@
 
 ### Pasos para correr
   1. Clonar el repositorio y ubicarse dentro del directorio
+  ```
+  npm clone https://github.com/camidorego/EquipoRohan-M101.git
+  ```
   2. Instalar las dependencias:
-    ```
-    npm install
-    ```
+  ```
+  npm install
+  ```
   3. Ejecutar con npm
   ```
   npm run dev
