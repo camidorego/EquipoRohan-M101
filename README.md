@@ -6,7 +6,7 @@
 ### Pasos para correr
   1. Clonar el repositorio y ubicarse dentro del directorio
   ```
-  npm clone https://github.com/camidorego/EquipoRohan-M101.git
+  git clone https://github.com/camidorego/EquipoRohan-M101.git
   ```
   2. Instalar las dependencias:
   ```
