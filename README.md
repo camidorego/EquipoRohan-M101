@@ -20,12 +20,14 @@ TypeScript: Un superconjunto de JavaScript que agrega tipado estático, lo que a
   ```
   git clone https://github.com/camidorego/EquipoRohan-M101.git
   ```
-  2. Instalar deno:
+  2. Instalar deno y configurar tu entorno:
   ```
   curl -fsSL https://deno.land/install.sh | sh
+  export DENO_INSTALL="<your-home-directory-path>/.deno"
+  export PATH="$DENO_INSTALL/bin:$PATH"
   ```
   ver documentación: https://docs.deno.com/runtime/manual/
-   
+
   3. Ejecutar la app
   ```
   ./runApp
