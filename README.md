@@ -24,6 +24,8 @@ TypeScript: Un superconjunto de JavaScript que agrega tipado estático, lo que a
   ```
   curl -fsSL https://deno.land/install.sh | sh
   ```
+  ver documentación: https://docs.deno.com/runtime/manual/
+   
   3. Ejecutar la app
   ```
   ./runApp
