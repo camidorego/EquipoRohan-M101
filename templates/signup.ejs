@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <script>
+      async function doSignup() {
+        const name = document.getElementById("name").value;
+        if(!name) return swal.fire("Error", "Name is required", "error");
+        const email = document.getElementById("email").value;
+        if(!email) return swal.fire("Error", "Email is required", "error");
+        const password = document.getElementById("password").value;
+        if(!password) return swal.fire("Error", "Password is required", "error");
+        const res = await fetch(`${window.location.origin}/signup`, {
+            method: 'POST',
+            body: JSON.stringify({name, email, password}),
+            headers: {
+              'content-type': 'application/json'
+            }
+        });
+        if(res.status === 201) {
+            Swal.fire("Signup complete",
+                "Redirecting to login page",
+                "success"
+            ).then(() => {
+                window.location.href = "../login.html";
+            });
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Signup failed",
+                text: await res.text(),
+            });
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="card">
+      <h3>Crea tu cuenta</h3>
+
+      <label for="name">Nombre</label>  
+      <input type="name" id="name" required/>
+        
+      <label for="userName">Email</label>
+      <input type="email" id="email" required/>
+        
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" required/>
+        
+      <button onclick="doSignup()">Crear cuenta</button>
+    </div>
+             
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <script>
+      loadUserProfile();
+
+      async function loadUserProfile() {
+        const token = localStorage.getItem("token");
+        if(!token) {
+          window.location.href = "../login.html";
+          return;
+        }
+        const res = await fetch(`${window.location.origin}/userProfile`, {
+            headers: {
+              'authorization': 'bearer '+token
+            }
+        });
+        if(res.status === 200) {
+            const resJson = await res.json();
+            document.getElementById('name').innerHTML = resJson.name;
+            document.getElementById('email').innerHTML = resJson.email;
+        } else {
+          window.location.href = "../login.html";
+        }
+      }
+
+      async function doLogout() {
+        const token = window.localStorage.getItem("token");
+        const res = await fetch(`${window.location.origin}/logout`, {
+            headers: {
+              'authorization': 'bearer '+token
+            }
+        });
+        if(res.status === 200) {
+            window.localStorage.removeItem("token");
+            window.location.href = "../login.html";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hola Mundo!</h1>
+      <h3 class="mb-5">Bienvenido, <label id="name"/></h3>
+      <h5>Equipo Rohan: Camila Do Rego, José Miranda y Mathias Martinez</h5>
+
+      <br>
+      <button onclick="doLogout()">Logout</button>
+      <br>
+    </div>
+              
+  </body>
+</html>
