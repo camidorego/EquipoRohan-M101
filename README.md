@@ -19,6 +19,7 @@ TypeScript: Un superconjunto de JavaScript que agrega tipado estático, lo que a
   1. Clonar el repositorio y ubicarse dentro del directorio
   ```
   git clone https://github.com/camidorego/EquipoRohan-M101.git
+  cd EquipoRohan-M101
   ```
   2. Instalar deno y configurar tu entorno:
   ```
