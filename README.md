@@ -16,6 +16,7 @@ Oak: Un middleware framework inspirado en Koa, construido específicamente para 
 TypeScript: Un superconjunto de JavaScript que agrega tipado estático, lo que ayuda a detectar errores en tiempo de desarrollo y mejora la mantenibilidad del código.
 
 ### Pasos para correr
+En Linux/MacOS:
   1. Clonar el repositorio y ubicarse dentro del directorio
   ```
   git clone https://github.com/camidorego/EquipoRohan-M101.git
