@@ -37,3 +37,8 @@ TypeScript: Un superconjunto de JavaScript que agrega tipado estático, lo que a
   ```
   http://localhost:8000
   ```
+  5. Credenciales de prueba
+  ```
+  email: cami@gmail.com
+  contraseña: 12345
+  ```
